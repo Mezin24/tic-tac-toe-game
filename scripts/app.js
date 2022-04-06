@@ -1,0 +1,10 @@
+const backdrop = document.getElementById('backdrop')
+const modal = document.getElementById('config-overlay')
+const editPlayer1Btn = document.getElementById('edit-player-1-btn')
+const editPlayer2Btn = document.getElementById('edit-player-2-btn')
+const closeEditBtn = document.getElementById('close-edit-btn')
+
+editPlayer1Btn.addEventListener('click', openEdit)
+editPlayer2Btn.addEventListener('click', openEdit)
+backdrop.addEventListener('click', closeEdit)
+closeEditBtn.addEventListener('click', closeEdit)
