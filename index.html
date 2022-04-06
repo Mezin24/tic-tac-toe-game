@@ -28,8 +28,9 @@
           <label for="playername">Player name</label>
           <input type="text" name="playername" id="playername" />
         </div>
+        <p id="config-error"></p>
         <div>
-          <button type="button" class="btn btn-alt" id="close-edit-btn">Cancel</button>
+          <button type="reset" class="btn btn-alt" id="close-edit-btn">Cancel</button>
           <button type="submit" class="btn">Confirm</button>
         </div>
       </form>
@@ -37,19 +38,19 @@
     <section id="game-configuration">
       <ol>
         <li>
-          <article>
+          <article id="player-1-data">
             <h2>Player 1</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">X</p>
-            <button type="button" class="btn btn-alt" id="edit-player-1-btn">Edit</button>
+            <button type="button" class="btn btn-alt" id="edit-player-1-btn" data-player="1">Edit</button>
           </article>
         </li>
         <li>
-          <article>
+          <article id="player-2-data">
             <h2>Player 1</h2>
             <h3>PLAYER NAME</h3>
             <p class="player-symbol">0</p>
-            <button type="button" class="btn btn-alt" id="edit-player-2-btn">Edit</button>
+            <button type="button" class="btn btn-alt" id="edit-player-2-btn" data-player="2">Edit</button>
           </article>
         </li>
       </ol>
