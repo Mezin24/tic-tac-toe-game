@@ -65,3 +65,12 @@ function inputValidate(e) {
         formElement.classList.remove('error')
     }
 }
+
+function startNewGame() {
+    if (players[0].name === '' || players[1].name === '') {
+        alert('Please, enter custom user name!')
+        return
+    }
+
+    gameField.classList.remove('hidden')
+}

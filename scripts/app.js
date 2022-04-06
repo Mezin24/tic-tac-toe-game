@@ -16,10 +16,12 @@ const modal = document.getElementById('config-overlay')
 const configErrorMsg = document.getElementById('config-error')
 const formElement = document.querySelector('form')
 const nameInputElement = formElement.querySelector('input[name="playername"]')
+const gameField = document.getElementById('active-game')
 
 const editPlayer1Btn = document.getElementById('edit-player-1-btn')
 const editPlayer2Btn = document.getElementById('edit-player-2-btn')
 const closeEditBtn = document.getElementById('close-edit-btn')
+const startNewGameBtn = document.getElementById('start-newGame-btn')
 
 window.addEventListener('load', loadPlayersNames)
 
@@ -31,3 +33,5 @@ closeEditBtn.addEventListener('click', closeEdit)
 
 formElement.addEventListener('submit', editPlayerName)
 nameInputElement.addEventListener('input', inputValidate)
+
+startNewGameBtn.addEventListener('click', startNewGame)
