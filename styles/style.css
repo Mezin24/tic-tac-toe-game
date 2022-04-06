@@ -1,5 +1,6 @@
 @import url(./overlay.css);
 @import url(./configuration.css);
+@import url(./game.css);
 
 :root {
   --ff-primary: 'Open Sans', sans-serif;
@@ -7,6 +8,7 @@
   --color-1: rgba(247, 239, 247);
   --color-2: rgba(140, 0, 255);
   --color-2-dark: rgba(79, 10, 190);
+  --color-2-darker: rgb(50, 5, 87);
   --color-2-light: rgba(245, 232, 255);
   --dark-color: rgba(44, 41, 44);
   --white-color: #fff;
