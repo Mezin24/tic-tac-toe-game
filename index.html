@@ -5,25 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/overlay.css">
   <title>Tic Tac Toe Game</title>
 </head>
 
 <body>
-  <header>
+  <div id="backdrop"></div>
+  <header class="main-header">
     <h1>Play Tic, Tac, Toe</h1>
     <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
   </header>
   <main>
-    <aside>
+    <aside class="modal" id="config-overlay">
       <h2>Choose your name</h2>
       <form>
-        <div>
+        <div class="form-control">
           <label for="playername">Player name</label>
           <input type="text" name="playername" id="playername" />
         </div>
         <div>
-          <button type="button">Cancel</button>
-          <button type="submit">Confirm</button>
+          <button type="button" class="btn btn-alt">Cancel</button>
+          <button type="submit" class="btn">Confirm</button>
         </div>
       </form>
     </aside>
@@ -33,20 +37,20 @@
           <article>
             <h2>Player 1</h2>
             <h3>PLAYER NAME</h3>
-            <p>X</p>
-            <button type="button">Edit</button>
+            <p class="player-symbol">X</p>
+            <button type="button" class="btn btn-alt">Edit</button>
           </article>
         </li>
         <li>
           <article>
             <h2>Player 1</h2>
             <h3>PLAYER NAME</h3>
-            <p>X</p>
-            <button type="button">Edit</button>
+            <p class="player-symbol">0</p>
+            <button type="button" class="btn btn-alt">Edit</button>
           </article>
         </li>
       </ol>
-      <button>Start new Game</button>
+      <button class="btn">Start new Game</button>
     </section>
     <section>
       <article id="active-game">

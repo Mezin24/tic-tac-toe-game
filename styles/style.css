@@ -1,0 +1,62 @@
+@import url(./overlay.css);
+@import url(./configuration.css);
+
+:root {
+  --ff-primary: 'Open Sans', sans-serif;
+
+  --color-1: rgba(247, 239, 247);
+  --color-2: rgba(140, 0, 255);
+  --color-2-dark: rgba(79, 10, 190);
+  --color-2-light: rgba(245, 232, 255);
+  --dark-color: rgba(44, 41, 44);
+  --white-color: #fff;
+
+  --br-1: 4px;
+  --br-2: 6px;
+
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  color: var(--dark-color);
+  background-color: var(--color-1);
+}
+
+.main-header {
+  background-color: var(--color-2);
+  color: var(--white-color);
+  text-align: center;
+  padding: 2rem 5%;
+}
+
+.btn {
+  font: inherit;
+  padding: .5rem 1.5rem;
+  background-color: var(--color-2);
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--br-1);
+  cursor: pointer;
+  transition: all .25s;
+}
+
+.btn-alt {
+  background-color: transparent;
+  background-color: transparent;
+  color: var(--color-2);
+}
+
+.btn:hover {
+  background-color: var(--color-2-dark);
+  border-color: var(--color-3);
+}
+.btn-alt:hover {
+  background-color: var(--color-2-light); 
+  border-color: transparent;
+}
