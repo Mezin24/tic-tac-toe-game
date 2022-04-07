@@ -1,15 +1,23 @@
+const gameData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+]
+
 let editedPlayer = 0
 let activePlayer = 0
+let gameRound = 1
+let isGameOver = false
 
 const players = JSON.parse(localStorage.getItem('players')) || [
-    {
-        name: '',
-        symbol: 'X',
-    },
-    {
-        name: '',
-        symbol: 'O',
-    },
+  {
+    name: '',
+    symbol: 'X',
+  },
+  {
+    name: '',
+    symbol: 'O',
+  },
 ]
 
 const backdrop = document.getElementById('backdrop')
@@ -20,6 +28,7 @@ const nameInputElement = formElement.querySelector('input[name="playername"]')
 const gameField = document.getElementById('active-game')
 const gameBoard = document.getElementById('game-board')
 const activePlayerName = document.getElementById('active-player-name')
+const gameOverBoard = document.getElementById('game-over')
 
 const editPlayer1Btn = document.getElementById('edit-player-1-btn')
 const editPlayer2Btn = document.getElementById('edit-player-2-btn')
