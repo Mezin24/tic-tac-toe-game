@@ -4,6 +4,8 @@ function startNewGame() {
     return
   }
 
+  restartGame()
+
   gameField.classList.remove('hidden')
   activePlayerName.textContent = players[activePlayer].name
 }
@@ -97,4 +99,23 @@ function gameOver(winnerID) {
     gameOverBoard.firstElementChild.textContent = "It's a draw!"
   }
   isGameOver = true
+}
+
+function restartGame() {
+  activePlayer = 0
+  gameRound = 1
+  isGameOver = false
+
+  let k = 0
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      gameData[i][j] = 0
+      gameBoard.children[k].textContent = ''
+      gameBoard.children[k].classList.remove('disabled')
+      k++
+    }
+  }
+  gameOverBoard.classList.add('hidden')
+  gameOverBoard.firstElementChild.innerHTML =
+    'You won, <span>PLAYER NAME</span>!'
 }
