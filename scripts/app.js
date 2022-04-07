@@ -1,4 +1,5 @@
 let editedPlayer = 0
+let activePlayer = 0
 
 const players = JSON.parse(localStorage.getItem('players')) || [
     {
@@ -17,6 +18,8 @@ const configErrorMsg = document.getElementById('config-error')
 const formElement = document.querySelector('form')
 const nameInputElement = formElement.querySelector('input[name="playername"]')
 const gameField = document.getElementById('active-game')
+const gameBoard = document.getElementById('game-board')
+const activePlayerName = document.getElementById('active-player-name')
 
 const editPlayer1Btn = document.getElementById('edit-player-1-btn')
 const editPlayer2Btn = document.getElementById('edit-player-2-btn')
@@ -35,3 +38,4 @@ formElement.addEventListener('submit', editPlayerName)
 nameInputElement.addEventListener('input', inputValidate)
 
 startNewGameBtn.addEventListener('click', startNewGame)
+gameBoard.addEventListener('click', selectField)
